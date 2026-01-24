@@ -1,5 +1,5 @@
 #include <iostream>
-#include "SCServo.h"
+#include <ftservo/SCServo.h>
 
 SMS_STS sms_sts;
 

@@ -1,0 +1,18 @@
+@PACKAGE_INIT@
+
+# Include the exported targets
+include("${CMAKE_CURRENT_LIST_DIR}/FTServoTargets.cmake")
+
+# Check required components
+check_required_components(FTServo)
+
+# Set variables for backward compatibility
+set(FTServo_FOUND TRUE)
+set(FTServo_VERSION @FTServo_VERSION@)
+set(FTServo_INCLUDE_DIRS "@PACKAGE_INCLUDE_INSTALL_DIR@")
+set(FTServo_LIBRARIES FTServo::SCServo)
+
+# Provide legacy variables
+set(FTSERVO_FOUND ${FTServo_FOUND})
+set(FTSERVO_INCLUDE_DIRS ${FTServo_INCLUDE_DIRS})
+set(FTSERVO_LIBRARIES ${FTServo_LIBRARIES})

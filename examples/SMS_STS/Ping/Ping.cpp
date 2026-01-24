@@ -3,7 +3,7 @@ Ping指令测试,测试总线上相应ID舵机是否就绪,广播指令只适用
 */
 
 #include <iostream>
-#include "SCServo.h"
+#include <ftservo/SCServo.h>
 
 SMS_STS sms_sts;
 

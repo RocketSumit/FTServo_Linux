@@ -1,5 +1,5 @@
 #include <iostream>
-#include "SCServo.h"
+#include <ftservo/SCServo.h>
 
 HLSCL hlscl;
 
@@ -22,9 +22,9 @@ int main(int argc, char **argv)
 		int Temper;
 		int Move;
 		int Current;
-		//一条指令读舵机所有反馈数据至缓冲区
+		//脪禄脤玫脰赂脕卯露脕露忙禄煤脣霉脫脨路麓脌隆脢媒戮脻脰脕禄潞鲁氓脟酶
 		if(hlscl.FeedBack(1)!=-1){
-			Pos = hlscl.ReadPos(-1);//-1表示缓冲区数据，以下相同
+			Pos = hlscl.ReadPos(-1);//-1卤铆脢戮禄潞鲁氓脟酶脢媒戮脻拢卢脪脭脧脗脧脿脥卢
 			Speed = hlscl.ReadSpeed(-1);
 			Load = hlscl.ReadLoad(-1);
 			Voltage = hlscl.ReadVoltage(-1);
@@ -43,7 +43,7 @@ int main(int argc, char **argv)
 			std::cout<<"read err"<<std::endl;
 			sleep(1);
 		}
-		//一条指令读一个反馈数据
+		//脪禄脤玫脰赂脕卯露脕脪禄赂枚路麓脌隆脢媒戮脻
 		Pos = hlscl.ReadPos(1);
 		if(Pos!=-1){
 			std::cout<<"pos = "<<Pos<<std::endl;

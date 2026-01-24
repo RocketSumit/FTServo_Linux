@@ -1,0 +1,10 @@
+prefix=@CMAKE_INSTALL_PREFIX@
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/ftservo
+
+Name: FTServo
+Description: FEETECH BUS Servo Linux library
+Version: @FTServo_VERSION@
+Libs: -L${libdir} -lSCServo
+Cflags: -I${includedir}

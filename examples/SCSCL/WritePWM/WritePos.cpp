@@ -1,9 +1,9 @@
 /*
-µç»úÄ£Ê½Àý×Ó
+ÂµÃ§Â»ÃºÃ„Â£ÃŠÂ½Ã€Ã½Ã—Ã“
 */
 
 #include <iostream>
-#include "SCServo.h"
+#include <ftservo/SCServo.h>
 
 SCSCL sc;
 
@@ -21,22 +21,22 @@ int main(int argc, char **argv)
 	sc.PWMMode(1);
 	std::cout<<"mode = "<<1<<std::endl;
 	while(1){
-		//¶æ»ú(ID1)ÒÔ×î´ó50%Å¤¾ØÕýÏòÐý×ª
+		//Â¶Ã¦Â»Ãº(ID1)Ã’Ã”Ã—Ã®Â´Ã³50%Ã…Â¤Â¾Ã˜Ã•Ã½ÃÃ²ÃÃ½Ã—Âª
 		sc.WritePWM(1, 500);
 		std::cout<<"pwm = "<<500<<std::endl;
 		sleep(2);
 
-		//¶æ»ú(ID1)Í£Ö¹Ðý×ª
+		//Â¶Ã¦Â»Ãº(ID1)ÃÂ£Ã–Â¹ÃÃ½Ã—Âª
 		sc.WritePWM(1, 0);
 		std::cout<<"pwm = "<<0<<std::endl;
 		sleep(2);
 
-		//¶æ»ú(ID1)ÒÔ×î´ó50%Å¤¾Ø·´ÏòÐý×ª
+		//Â¶Ã¦Â»Ãº(ID1)Ã’Ã”Ã—Ã®Â´Ã³50%Ã…Â¤Â¾Ã˜Â·Â´ÃÃ²ÃÃ½Ã—Âª
 		sc.WritePWM(1, -500);
 		std::cout<<"pwm = "<<-500<<std::endl;
 		sleep(2);
 
-		//¶æ»ú(ID1)Í£Ö¹Ðý×ª
+		//Â¶Ã¦Â»Ãº(ID1)ÃÂ£Ã–Â¹ÃÃ½Ã—Âª
 		sc.WritePWM(1,0);
 		std::cout<<"pwm = "<<0<<std::endl;
 		sleep(2);

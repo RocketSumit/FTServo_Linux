@@ -3,7 +3,8 @@
 */
 
 #include <iostream>
-#include "SCServo.h"
+#include <cstdint>
+#include <ftservo/SCServo.h>
 
 SMS_STS sms_sts;
 uint8_t ID[] = {1, 2};

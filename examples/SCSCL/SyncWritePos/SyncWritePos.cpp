@@ -3,7 +3,7 @@
 */
 
 #include <iostream>
-#include "SCServo.h"
+#include <ftservo/SCServo.h>
 
 SCSCL sc;
 

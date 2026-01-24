@@ -1,0 +1,20 @@
+# Example CMakeLists.txt for using FTServo library
+# Copy this file to your example directory and rename to CMakeLists.txt
+
+cmake_minimum_required(VERSION 3.10)
+project(YourExampleName)
+
+# Find the installed FTServo package
+find_package(FTServo REQUIRED)
+
+# Add your executable
+add_executable(${PROJECT_NAME} YourSourceFile.cpp)
+
+# Link against FTServo library
+target_link_libraries(${PROJECT_NAME} FTServo::SCServo)
+
+# Set C++ standard if needed
+set_target_properties(${PROJECT_NAME} PROPERTIES
+    CXX_STANDARD 11
+    CXX_STANDARD_REQUIRED ON
+)
